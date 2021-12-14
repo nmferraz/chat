@@ -1,0 +1,1 @@
+É necessario criar uma pasta com o nome 'images' dentro da pasta 'php'
