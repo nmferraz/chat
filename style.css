@@ -145,6 +145,17 @@ body{
   font-size: 18px;
   font-weight: 500;
 }
+.users header .delete{
+  display: block;
+  background: transparent;
+  color: rgb(168, 14, 14);
+  outline: none;
+  border: none;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 17px;
+}
 .users header .logout{
   display: block;
   background: #333;
@@ -368,6 +379,10 @@ body{
     width: 45px;
   }
   .users header .logout{
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+  .users header .delete{
     padding: 6px 10px;
     font-size: 16px;
   }
