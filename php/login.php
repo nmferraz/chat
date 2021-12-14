@@ -10,21 +10,21 @@
             $user_pass = md5($password);
             $enc_pass = $row['password'];
             if($user_pass === $enc_pass){
-                $status = "Active now";
+                $status = "Está ativo agora";
                 $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id = {$row['unique_id']}");
                 if($sql2){
                     $_SESSION['unique_id'] = $row['unique_id'];
-                    echo "success";
+                    echo "successo";
                 }else{
-                    echo "Something went wrong. Please try again!";
+                    echo "Alguma coisa correu mal. Tente novamente!";
                 }
             }else{
-                echo "Email or Password is Incorrect!";
+                echo "Email ou Password está incorrecto!";
             }
         }else{
-            echo "$email - This email not Exist!";
+            echo "$email - Este email não foi encontardo!";
         }
     }else{
-        echo "All input fields are required!";
+        echo "Preencha todos os campos!";
     }
 ?>
