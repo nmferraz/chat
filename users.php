@@ -23,12 +23,18 @@
             <p><?php echo $row['status']; ?></p>
           </div>
         </div>
-        <a href="php/edit.php?<?php echo $row['unique_id']; ?>" class="delete"><i class="fas fa-user-alt"></i></a>
+        <form action="php/edit.php" method="post">
+          <?php 
+            echo '<button type="submit" class="delete"><i class="fas fa-user-alt"></i></button>'
+          ?>
+        </form>
+        
+        <!--<a href="php/edit.php?id=<?php echo $row['unique_id']; ?>" class="delete"><i class="fas fa-user-alt"></i></a>-->
         <a href="php/delete.php?logout_id=<?php echo $row['unique_id']; ?>" class="delete"><i class="fas fa-trash-alt"></i></a>
         <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout"><i class="fas fa-sign-out-alt"></i></a>
       </header>
       <div class="search">
-        <span class="text">Seleciona um utilizador para começar a conversar</span>
+        <span class="text">Mensagens</span>
         <input type="text" placeholder="Escreve um nome para pesquisar...">
         <button><i class="fas fa-search"></i></button>
       </div>
